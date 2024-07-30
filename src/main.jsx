@@ -6,7 +6,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className="bg-[url('/bird.svg')] min-h-screen w-min-screen bg-cover bg-center">
+    <div>
     <App  />
     </div>
   </React.StrictMode>,
