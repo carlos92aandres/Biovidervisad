@@ -10,21 +10,14 @@ function App() {
     setMenu(!menu);
   };
 
-  const center = [5.5, -73.5];
-  const zoom = 8;
-
-  const [coords, setCoords] = useState();
-
-  const success = (pos) => {
-    const currentCoords = {
-      lat: pos.coords.latitude,
-      lon: pos.coords.longitude,
-    };
-    setCoords(currentCoords);
-  };
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(success);
-  }, []);
+  const zoom = 9;
+  const Sumapaz = [4.41667, -74.1];
+  const Chicaque = [4.60634279, -74.30475616];
+  const tunos = [4.6161871, -74.35184479];
+  const monarca = [4.85580111, -74.09506989];
+  const flores = [4.72426987, -74.25228119];
+  const Oso = [4.8295269, -47.0136795];
+  const vega = [5.00206041, -74.33998871];
 
   return (
     <div className='font-["Julius Sans One"] font-light'>
@@ -96,12 +89,13 @@ function App() {
               </h2>
               <div className="sm:w-[400px]">
                 <p className="font-light text-[#FFF67E] ">
-                  Somo BioCundi un grupo de estudiantes de TalentoTech que
-                  quiere dar a conocer las riquezas de la zona cundiboyacense a
-                  traves de caminatas que te llevarán a conocer la Biodiversidad
-                  de la zona encontrarás cascadas, arroyos, paisajes, lugares
-                  maravillosos, especies de fauna y flora que representa a
-                  nuestra region.
+                  Descubre la riqueza única de la biodiversidad en Cundinamarca
+                  y Boyacá. Esta región alberga especies únicas en el mundo y
+                  varias endémicas, convirtiéndose en un tesoro natural
+                  invaluable. Acompáñanos en un viaje por senderos accesibles
+                  para conocer de cerca la flora, fauna y ecosistemas que hacen
+                  de este lugar un paraíso biodiverso. ¡Explora, aprende y
+                  celebra la naturaleza con nosotros!
                 </p>
               </div>
             </div>
@@ -117,16 +111,57 @@ function App() {
           <h2 className="pl-5 pt-6 font-light text-2xl text-[#FFF67E] font-semi">
             Senderos
           </h2>
-          <div className="w-[320px] h-[320px] text-center ml-[250px] md:w-[380px]">
-            <MapContainer center={center} zoom={zoom} className="w-full h-full">
+          <div className="w-[320px] h-[320px] text-center ml-[40px] md:translate-x-1/2 md:w-[380px]">
+            <MapContainer
+              center={monarca}
+              zoom={zoom}
+              className="w-full h-full"
+            >
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               />
-              <Marker position={center}>
+
+              <Marker position={Sumapaz}>
                 <Popup>
-                  A pretty CSS3 popup.
-                  <br /> Easily customizable.
+                  Parque nacional <br />
+                  Natural Sumapaz
+                </Popup>
+              </Marker>
+              <Marker position={Chicaque}>
+                <Popup>
+                  Parque nacional <br />
+                  Natural Chicaque
+                </Popup>
+              </Marker>
+              <Marker position={tunos}>
+                <Popup>
+                  Parque nacional <br />
+                  Natural Los tunos
+                </Popup>
+              </Marker>
+              <Marker position={monarca}>
+                <Popup>
+                  Parque nacional <br />
+                  Natural Monarca
+                </Popup>
+              </Marker>
+              <Marker position={flores}>
+                <Popup>
+                  Parque nacional <br />
+                  Natural de las flores
+                </Popup>
+              </Marker>
+              <Marker position={Oso}>
+                <Popup>
+                  Parque Montaña <br />
+                  del Oso
+                </Popup>
+              </Marker>
+              <Marker position={vega}>
+                <Popup>
+                  Parque San Felipe <br />
+                  de la Vega
                 </Popup>
               </Marker>
             </MapContainer>
