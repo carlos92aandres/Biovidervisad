@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // Importar estilos de Leaflet
@@ -88,7 +88,7 @@ function App() {
                 Quienes somos
               </h2>
               <div className="sm:w-[400px]">
-                <p className="font-light text-[#FFF67E] ">
+                <p className="font-light text-[#BFEA7C] ">
                   Descubre la riqueza única de la biodiversidad en Cundinamarca
                   y Boyacá. Esta región alberga especies únicas en el mundo y
                   varias endémicas, convirtiéndose en un tesoro natural
@@ -107,11 +107,11 @@ function App() {
         </article>
       </section>
       <section>
-        <div className="grid h-[full] gap-3 bg-[#416D19]">
-          <h2 className="pl-5 pt-6 font-light text-2xl text-[#FFF67E] font-semi">
+        <div className="grid gap-3 h-[450px] bg-[#416D19] ">
+          <h2 className="pl-3 pt-6 font-light text-2xl text-[#FFF67E] ">
             Senderos
           </h2>
-          <div className="w-[320px] h-[320px] text-center ml-[40px] md:translate-x-1/2 md:w-[380px]">
+          <div className="w-[320px] h-[320px] text-center ml-[35px] md:translate-x-1/2 md:w-[380px]">
             <MapContainer
               center={monarca}
               zoom={zoom}
@@ -166,13 +166,133 @@ function App() {
               </Marker>
             </MapContainer>
           </div>
-          <div className="text-[#FFF67E] text-xl text-center font-light ">
-            Aca podrás encontrar las mejores rutas posibles sin necesidad de
-            pagar
-          </div>
+          <section className="">
+            <div className=" h-[420px] grid gap-5 pl-2 bg-[#D8F8A7]">
+              <h2 className="text-[#416D19] text-xl pt-5 font pl-3 md:text-5xl md:mt-6">
+                Riqueza Verde
+              </h2>
+              <p className="text-[#243A10] md:p-4 md:text-xl">
+                Descubre la biodiversidad única de Cundinamarca y Boyacá. Estas
+                regiones colombianas, con sus páramos y bosques andinos,
+                albergan especies endémicas como el frailejón y el reyezuelo de
+                frente roja. Su flora y fauna no solo enriquecen nuestro
+                entorno, sino que también mantienen el equilibrio ecológico.
+                Proteger estas especies es crucial para conservar nuestro
+                patrimonio natural y asegurar que las futuras generaciones
+                disfruten de esta belleza. Únete a nosotros para celebrar y
+                preservar la biodiversidad de Cundinamarca y Boyacá.
+              </p>
+            </div>
+          </section>
+          <section className="bg-[#9BCF53] grid gap-3">
+            <div className="">
+              <h2 className="text-[#4A791E] font-light text-2xl ml-4 md:mt-5">Fauna</h2>
+            </div>
+            <div className=" grid gap-5 md:flex md:justify-center md:items-center md:gap-0 md:p-3">
+              <div className="grid gap-5 content-center justify-items-center md:gap-0 md:h-[350px] md:w-[350px] ">
+                <img
+                  className="h-[300px] w-[300px] md:w-[230px] md:h-[230px]"
+                  src="/conejoCampo.png"
+                  alt=""
+                />
+                <p className="text-[#FFFFFF] p-2">
+                  Oryctolagus cuniculus: También conocido como el "conejo de
+                  montaña" o "conejo del páramo", se encuentra en los
+                  ecosistemas de páramo de los Andes.
+                </p>
+              </div>
+              <div className="grid gap-5 content-center justify-items-center md:h-[350px] md:w-[350px]">
+                <img
+                  className="h-[300px] w-[300px] md:w-[230px] md:h-[230px]"
+                  src="ColumbaCorensis.png"
+                  alt=""
+                />
+                <p className="text-[#FFFFFF] p-2">
+                  Lachesis muta: Una serpiente venenosa que se encuentra en la
+                  región andina, aunque su distribución es más amplia.
+                </p>
+              </div>
+              <div className="grid gap-5 content-center justify-items-center md:h-[350px] md:w-[350px]">
+                <img
+                  className="h-[300px] w-[300px] md:w-[230px] md:h-[230px]"
+                  src="LachesisMuta.png"
+                  alt=""
+                />
+                <p className="text-[#FFFFFF] p-2">
+                  Columba corensis: Una paloma endémica que habita en los
+                  bosques de montaña.
+                </p>
+              </div>
+              
+            </div>
+            <div>
+                <p className="text-[#243A10]">
+                  Embárcate en un viaje por los senderos ecológicos de
+                  Cundinamarca y Boyacá y descubre una fauna fascinante y única.
+                  Estos ecosistemas montañosos y de páramo albergan una gran
+                  variedad de especies endémicas que no se encuentran en ningún
+                  otro lugar del mundo. Desde el escurridizo conejo de montaña
+                  hasta la serpiente venenosa de la región, cada encuentro con
+                  la vida silvestre ofrece una experiencia inolvidable. Aprecia
+                  cómo estos animales han evolucionado para adaptarse a sus
+                  hábitats específicos y contribuye a la conservación de su
+                  entorno natural visitando estas áreas protegidas.
+                </p>
+              </div>
+          </section>
+          <section className="bg-[#9BCF53] grid gap-3 pt-5">
+            <div className="">
+              <h2 className="text-[#4A791E] text-2xl ml-4">Flora</h2>
+            </div>
+            <div className=" grid gap-5">
+              <div className="grid gap-5 content-center justify-items-center">
+                <img
+                  className="h-[300px] w-[300px]"
+                  src="/frailejon.png"
+                  alt=""
+                />
+                <p className="text-[#FFFFFF] p-2">
+                  Espeletia pycnophylla: Conocida como "frailejón", es una
+                  planta característica de los páramos de los Andes colombianos.
+                </p>
+              </div>
+              <div className="grid gap-5 content-center justify-items-center">
+                <img
+                  className="h-[300px] w-[300px]"
+                  src="/andicola.png"
+                  alt=""
+                />
+                <p className="text-[#FFFFFF] p-2">
+                  Eryngium andicola: Una planta de la familia de las apiáceas
+                  que crece en los páramos y bosques de montaña.
+                </p>
+              </div>
+              <div className="grid gap-5 content-center justify-items-center">
+                <img className="h-[300px] w-[300px]" src="/lavis.png" alt="" />
+                <p className="text-[#FFFFFF] p-2">
+                  Senecio laevis: Otra especie de la familia Asteraceae,
+                  endémica de los páramos.
+                </p>
+              </div>
+              <div>
+                <p className="text-[#243A10]">
+                  La flora de Cundinamarca y Boyacá es un verdadero tesoro de
+                  biodiversidad que te espera en nuestros senderos ecológicos.
+                  Los exuberantes bosques andinos y los majestuosos páramos
+                  están adornados con plantas endémicas que sólo crecen en esta
+                  región. Observa la imponente belleza del frailejón y la
+                  resistencia de otras especies adaptadas a las condiciones
+                  extremas de altura. Estos senderos ofrecen una oportunidad
+                  única para conectarte con la vegetación local y comprender la
+                  importancia de conservar estos ecosistemas vitales para la
+                  salud ambiental.
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
-      <footer className="bg-[#273f10] h-[250px]  text-center grid pt-10">
+      <footer className="bg-[black]  text-center">
         <div className="flex justify-center gap-3 text-[#faf6c2] text-lg font-light ">
           <a
             className="cursor-pointer hover:text-white hover:-translate-y-1 transition hover:duration-200"
